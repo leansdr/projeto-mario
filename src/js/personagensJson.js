@@ -18,13 +18,13 @@ let personagensJson = [
     nome: "Peach",
     img: "./src/imagens/princesa.webp",
     descricao:
-      "Peach é a princesa do Reino dos Cogumelos e do seu povo que são os Toads. Ela sempre é capturada pelo monarca da Terra Escura chamado Bowser que quer se casar com ela e tomar seu reino. Não é só o Mario e Luigi que são herói, ela tambem é uma heroina que tem uma habilidade de flutuar ar com suas saias e seu guarda chuva e mesmo sendo confrontada pelos seus inimigos, ela se mostra alegre e passiva mesmo diante de grandes oponentes.",
+      "Peach é a princesa do Reino dos Cogumelos. Ela sempre é capturada pelo monarca da Terra Escura chamado Bowser que quer se casar com ela e tomar seu reino. Ela tambem é uma heroina e mesmo sendo confrontada pelos seus inimigos, ela se mostra alegre e passiva mesmo diante de grandes oponentes.",
   },
   {
     id: 04,
     nome: "Bowser",
     img: "./src/imagens/bowser.png",
     descricao:
-      "Bowser é o principal vilão, e o rei dos Koopas. É o arqui-inimigo do Mario e sequestra a Princesa Peach várias vezes.Ele também tem uma forma morta - o Dry Bowser",
+      "Bowser é o principal vilão, e o rei dos Koopas. É o arqui-inimigo do Mario e sequestra a Princesa Peach várias vezes. Ele também tem uma forma morta - o Dry Bowser.",
   },
 ];
