@@ -11,10 +11,25 @@ const containerDetalhes = document.querySelector(".container-detalhes");
 const fundoVideo = document.querySelector(".fundo-video");
 const btnDetalhes = document.querySelector("#detalhes");
 const btnHome = document.querySelector("#home");
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".models li .card");
 const modalPersonagens = document.querySelector(".modal-personagens");
 const links = document.querySelectorAll(".menu .navlist");
-console.log(links);
+
+personagensJson.map((personagem, index) => {
+  let personagemItem = document.querySelector(".models li").cloneNode(true);
+  personagemItem.setAttribute("data-key", index);
+  personagemItem.querySelector(".card-button").innerHTML = personagem.nome;
+  personagemItem.querySelector(".card .card-img").src = personagem.img;
+  personagemItem.querySelector(".card").addEventListener("click", (e) => {
+    e.preventDefault();
+    let key = e.target.closest("li").getAttribute("data-key");
+    document.querySelector(".left-side img").src = personagensJson[key].img;
+    document.querySelector(".right-side p").innerHTML =
+      personagensJson[key].descricao;
+    alternarModalPersonagens();
+  });
+  document.querySelector(".container-cards").append(personagemItem);
+});
 
 function alternarModal() {
   modal.classList.toggle("aberto");
@@ -32,12 +47,6 @@ function activeLink() {
 botaoTrailer.addEventListener("click", () => {
   alternarModal();
   video.setAttribute("src", linkDoVideo);
-});
-
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    alternarModalPersonagens();
-  });
 });
 
 links.forEach((link) => {

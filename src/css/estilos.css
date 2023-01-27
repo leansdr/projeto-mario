@@ -1,8 +1,12 @@
 body {
   font-family: "Poppins";
   background-image: url("../imagens/background.jpg");
-  background-position: center;
+  background-position:center;
   background-size: cover;
+}
+
+.models{
+  display: none;
 }
 
 .cabecalho {
@@ -113,6 +117,7 @@ body {
   background-color: rgba(52, 52, 50, 0.749);
   opacity: 0;
   visibility: hidden;
+  transition: all ease .5s;
 }
 
 .conteudo-modal,
@@ -182,16 +187,18 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .container-detalhes .container-cards .card {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding: 30px;
+  padding: 15px;
   cursor: pointer;
   height: 290px;
+  width: 180px;
 }
 
 .container-detalhes .container-cards .card .card-img {
@@ -211,6 +218,7 @@ body {
   border-radius: 15px;
   text-transform: uppercase;
   transition: 0.4s all ease-in-out;
+  width: 100%;
 }
 
 .container-detalhes .container-cards .card .card-button:hover {
@@ -231,6 +239,7 @@ body {
   display: flex;
   background-color: #fff;
   width: 60%;
+  height: 50vh;
   padding: 20px;
   background-image: url("../imagens/background02.jpg");
   background-size: cover;
@@ -238,12 +247,16 @@ body {
   background-repeat: no-repeat;
 }
 
-.conteudo-modal-personagens .modal-info #left-side,
-.conteudo-modal-personagens .modal-info #right-side {
+.conteudo-modal-personagens .modal-info .left-side,
+.conteudo-modal-personagens .modal-info .right-side {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.conteudo-modal-personagens .modal-info .left-side img {
+  width: 350px;
 }
 
 .conteudo-modal-personagens .modal-info #right-side p {
